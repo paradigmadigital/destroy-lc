@@ -1,0 +1,7 @@
+---
+# tasks file for destroy-lc
+- name: Delete Launch Configuration
+  ec2_lc:
+    state  : absent
+    region : "{{ lc.region }}"
+    name   : "{{ lc.name }}"
